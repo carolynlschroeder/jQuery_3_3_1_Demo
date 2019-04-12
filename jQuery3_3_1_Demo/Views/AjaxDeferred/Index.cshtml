@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Ajax Deferred";
+}
+
+<h1>Ajax Deferred</h1>
+
+<ul id ="results" class="list-unstyled">
+
+</ul>
+
+@section scripts{ 
+    <script>
+        $(function() {
+            $.ajax({
+                url: "/Json/GetSponsors"
+                })
+                .done(function (data) {
+                    for (var i = 0; i < data.sponsors.length; i++) {
+                        $("#results").append("<li>" + data.sponsors[i] + "</li>");
+                    }
+
+                }).fail(function() {
+                    alert("Error");
+                });
+        });
+    </script>
+}

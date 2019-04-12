@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "Remove Attribute Doesn't Work";
+}
+
+<h1>Remove Attribute Doesn't Work</h1>
+
+<div><label><input id="check" type="checkbox" />&nbsp;Check Me</label></div>
+<div><input type="button" id="makeCheck" value="Change Check" class="btn btn-primary" /></div>
+
+@section scripts{ 
+    <script>
+        $(function () {
+            $("#makeCheck").click(function () {
+                if ($("#check").is(":checked")) {
+                    $("#check").prop("checked", false);
+                } else {
+                    $("#check").prop("checked", true);
+                }
+            });
+        });
+    </script>
+}

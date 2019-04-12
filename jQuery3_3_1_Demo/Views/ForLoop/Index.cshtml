@@ -1,0 +1,46 @@
+﻿@model jQuery3_3_1_Demo.Models.NamesModel
+@{
+    ViewData["Title"] = "For Loop";
+}
+
+<h1>For Loop</h1>
+
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var m in Model.Names)
+    {
+        <tr>
+            <td>
+                @m
+            </td>
+            <td>
+                <input type="checkbox" class="check" value="all" /><input type="hidden" value="@m" />
+            </td>
+
+        </tr>
+    }
+</table>
+<input type="button" id="get" value="Get Results" class="btn btn-primary"/>
+<ul id="results" class="list-unstyled">
+</ul>
+
+@section scripts{
+    <script>
+        $(function() {
+            $("#get").click(function () {
+                $("#results").empty();
+                var $inputs = $('.check:checked');
+                for (var input of $inputs) {
+                    var name= $(input).next().val();
+                    $("#results").append("<li>" + name + "</li>");
+                }
+
+            });
+        })
+    </script>
+}

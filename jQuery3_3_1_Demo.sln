@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jQuery3_3_1_Demo", "jQuery3_3_1_Demo\jQuery3_3_1_Demo.csproj", "{CE36D308-A08A-4DFA-99C0-560A9A2B2791}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE36D308-A08A-4DFA-99C0-560A9A2B2791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE36D308-A08A-4DFA-99C0-560A9A2B2791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE36D308-A08A-4DFA-99C0-560A9A2B2791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE36D308-A08A-4DFA-99C0-560A9A2B2791}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81F6004D-C15D-4A58-AF48-F10866791CD8}
+	EndGlobalSection
+EndGlobal
