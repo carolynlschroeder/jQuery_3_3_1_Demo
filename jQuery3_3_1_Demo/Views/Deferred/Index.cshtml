@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Deferred";
+}
+
+<h1>Deferred</h1>
+<input type="button" id="run" value="Run" class="btn btn-primary"/>
+
+@section scripts{
+    <script>
+        $(function() {
+            $("#run").click(function() {
+                timeout(1000).then(function() {
+                    alert('I waited for 1 second!');
+                });
+
+            });
+        });
+
+        function timeout(milliseconds) {
+            // Create a new Deferred object
+            var deferred = $.Deferred();
+
+            // Resolve the Deferred after the amount of time specified by milliseconds
+            setTimeout(deferred.resolve, milliseconds);
+
+            // Return the Deferred's Promise object
+            return deferred.promise();
+        }
+
+    </script>
+}
+
